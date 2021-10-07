@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import styles from './ImageGallery.module.css';
 
@@ -16,4 +18,16 @@ const ImageGallery = ({ items, toggle }) => {
     </ul>
   );
 };
+
+ImageGallery.propTypes = {
+  images: PropTypes.array(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+    }),
+  ),
+  toggle: PropTypes.func.isRequired,
+};
+
 export default ImageGallery;
