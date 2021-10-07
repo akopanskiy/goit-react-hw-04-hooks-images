@@ -20,13 +20,7 @@ const ImageGallery = ({ items, toggle }) => {
 };
 
 ImageGallery.propTypes = {
-  images: PropTypes.array(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      webformatURL: PropTypes.string.isRequired,
-      largeImageURL: PropTypes.string.isRequired,
-    }),
-  ),
+  images: PropTypes.array,
   toggle: PropTypes.func.isRequired,
 };
 
